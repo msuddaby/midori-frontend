@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+.wave-bg {
+  background: url("./waves.svg") repeat-x;
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-color: #191A19;
+}
+
+.wave-bg-reverse {
+  background: url("./waves-rotate.svg") no-repeat;
+  background-size: 100% auto;
+  background-position: top;
+  background-color: #191A19;
+}
+
+/* .wave-bg-bottom {
+  background: url("./waves.svg") repeat-x;
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: repeat-x;
+} */
+
+.dark-bg {
+  background-color: #0b1816;
+}
+
+.green-bg {
+  background-color: #1b2c19;
+  /* background-color: #00231b; */
+}
+
+.custom-shape-divider-top-1690146083 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1690146083 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 112px;
+}
+
+.custom-shape-divider-top-1690146083 .shape-fill {
+  fill: #0B1816;
+}
+
+.custom-shape-divider-bottom-1690146370 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-bottom-1690146370 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 141px;
+}
+
+.custom-shape-divider-bottom-1690146370 .shape-fill {
+  fill: #0B1816;
+}
