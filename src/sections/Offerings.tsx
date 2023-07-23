@@ -1,7 +1,7 @@
 export default function Offerings() {
   return (
     <>
-      <section className="dark-bg h-screen w-screen">
+      <section className="dark-bg min-h-screen min-w-screen text-white flex p-12">
         <div className="h-full container m-auto">
           <div className="flex flex-col items-center justify-center h-full ">
             <h1 className="text-7xl font-bold text-white mb-6">

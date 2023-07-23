@@ -1,8 +1,8 @@
 export default function Hero() {
   return (
     <>
-      <section className="green-bg h-screen w-screen">
-        <div className="flex flex-col items-center justify-center h-full">
+      <section className="green-bg min-h-screen min-w-screen text-white flex justify-center items-center p-12">
+        <div className="flex flex-col items-center justify-center h-full text-center">
           <h1 className="text-6xl font-bold text-white">Midori Creative</h1>
         </div>
         <div className="custom-shape-divider-bottom-1690146370">

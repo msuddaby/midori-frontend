@@ -8,6 +8,10 @@ html {
   scroll-behavior: smooth;
 }
 
+section {
+  padding: 4rem;
+}
+
 .wave-bg {
   background: url("./waves.svg") repeat-x;
   background-size: contain;
