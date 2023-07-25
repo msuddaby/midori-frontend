@@ -28,7 +28,7 @@ function App() {
         <div id="smooth-content">
           <Hero />
           <WhoIs />
-          <Offerings />
+          {/* <Offerings /> */}
           <BestOf />
           <Friends />
         </div>
