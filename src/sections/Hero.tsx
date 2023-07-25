@@ -77,21 +77,35 @@ const Hero = () => {
 
     const h1 = document.querySelector("#mainLogo");
     const app = document.querySelector("html");
-    const h1width = h1!.clientWidth;
-    const h1height = h1!.clientHeight;
-    // const width = window.innerWidth;
-    // const height = window.innerHeight;
-    const width = app!.clientWidth;
-    const height = app!.clientHeight;
 
-    const toTopCornerx = (width / 2 - h1width / 2) - 24;
-    const toTopCornery = (height / 2 - h1height / 2) - 115;
+    const h1CurrentPos = h1!.getBoundingClientRect();
+
+    const h1X = h1CurrentPos.x;
+    const h1Y = h1CurrentPos.y * -1;
+
+    // const h1width = h1!.clientWidth;
+    // const h1height = h1!.clientHeight;
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    // const width = app!.clientWidth;
+    // const height = app!.clientHeight;
+
+    console.log(height);
+    console.log(h1Y);
+    const toTopCornerx = (width / 2 - h1X);
+    const toTopCornery = (height / 2 - h1Y);
+
+    // const toTopCornerx = (width / 2 - h1width / 2) - 24;
+    // const toTopCornery = (height / 2 - h1height / 2) - 115;
+
+    console.log("topCornerY " + toTopCornery);
+    console.log(toTopCornery - height);
 
     gsap.to(h1, {
       // x: "-40vw",
       // y: "-40vh",
       x: toTopCornerx * -1,
-      y: toTopCornery * -1,
+      y: h1Y + 24,
       scale: 0.25,
       position: "fixed",
       // top: "50%",
