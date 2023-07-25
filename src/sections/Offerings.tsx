@@ -1,7 +1,10 @@
+import { Box, Typography } from "@mui/joy";
+import WDSDCard from "../components/WDSDCard";
+
 export default function Offerings() {
   return (
     <>
-      <section className="bg-black min-h-screen min-w-screen text-white flex p-12">
+      <section className="bg-black min-h-screen min-w-screen text-white">
         {/* <div className="h-full container m-auto">
           <div className="flex flex-col items-center justify-center h-full ">
             <h1 className="text-7xl font-bold text-white mb-6">
@@ -61,7 +64,7 @@ export default function Offerings() {
             </div>
           </div>
         </div> */}
-        <div className="container mx-auto py-8 px-4">
+        {/* <div className="container mx-auto py-8 px-4">
           <div className="flex items-center justify-center flex-col">
             <h1 className="text-7xl font-bold text-white mb-6">
               What Does She Do?
@@ -129,7 +132,29 @@ export default function Offerings() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
+        <Box sx={{
+          display: {
+            md: "flex",
+          },
+          flexDirection: "column",
+          width: "100%",
+          height: "100%",
+          alignItems: "center",
+        }}>
+          <Typography level="h1" textColor={"common.white"}>What Does She Do?</Typography>
+          <Box sx={{
+            display: "flex",
+            overflowX: "auto",
+            gap: "1rem",
+          }}>
+            <WDSDCard />
+            <WDSDCard />
+            <WDSDCard />
+          </Box>
+
+        </Box>
+
       </section>
     </>
   );

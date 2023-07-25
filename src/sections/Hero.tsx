@@ -86,29 +86,19 @@ const Hero = () => {
     const h1X = h1CurrentPos.x;
     const h1Y = h1CurrentPos.y * -1;
 
-    // const h1width = h1!.clientWidth;
-    // const h1height = h1!.clientHeight;
     const width = document.documentElement.clientWidth;
-    const height = document.documentElement.clientHeight;
-    // const width = app!.clientWidth;
-    // const height = app!.clientHeight;
 
-    console.log(height);
-    console.log(h1Y);
+
     const toTopCornerx = (width / 2 - h1X);
-    const toTopCornery = (height / 2 - h1Y);
 
-    // const toTopCornerx = (width / 2 - h1width / 2) - 24;
-    // const toTopCornery = (height / 2 - h1height / 2) - 115;
+    console.log(h1Y)
 
-    console.log("topCornerY " + toTopCornery);
-    console.log(toTopCornery - height);
 
     gsap.to(h1, {
       // x: "-40vw",
       // y: "-40vh",
       x: toTopCornerx * -1,
-      y: h1Y + 24,
+      y: h1Y + 64,
       scale: 0.25,
       position: "fixed",
       // top: "50%",
