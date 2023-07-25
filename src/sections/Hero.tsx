@@ -67,12 +67,15 @@
 //   );
 // }
 
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 const Hero = () => {
-  useEffect(() => {
+
+
+  useLayoutEffect(() => {
+
     gsap.registerPlugin(ScrollTrigger);
 
     const h1 = document.querySelector("#mainLogo");
@@ -85,8 +88,8 @@ const Hero = () => {
 
     // const h1width = h1!.clientWidth;
     // const h1height = h1!.clientHeight;
-    const width = window.innerWidth;
-    const height = window.innerHeight;
+    const width = document.documentElement.clientWidth;
+    const height = document.documentElement.clientHeight;
     // const width = app!.clientWidth;
     // const height = app!.clientHeight;
 
