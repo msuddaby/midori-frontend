@@ -2,7 +2,6 @@ import "./App.css";
 import BestOf from "./sections/BestOf";
 import Friends from "./sections/Friends";
 import Hero from "./sections/Hero";
-import Offerings from "./sections/Offerings";
 import WhoIs from "./sections/WhoIs";
 // import gsap from "gsap-trial";
 // import { ScrollTrigger } from "gsap-trial/all";

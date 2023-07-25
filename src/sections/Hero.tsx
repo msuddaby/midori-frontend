@@ -76,7 +76,7 @@ const Hero = () => {
     gsap.registerPlugin(ScrollTrigger);
 
     const h1 = document.querySelector("#mainLogo");
-    const app = document.querySelector("html");
+    
 
     const h1CurrentPos = h1!.getBoundingClientRect();
 
