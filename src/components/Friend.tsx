@@ -1,7 +1,7 @@
 export default function Friend() {
   return (
     <>
-      <div className="green-bg rounded-xl px-12 py-6 flex gap-8 items-center flex-col md:flex-row">
+      <div className="border-2 border-white rounded-xl px-12 py-6 flex gap-8 items-center flex-col md:flex-row">
         <img
           src="https://via.placeholder.com/128"
           alt="Friends of Midori"
