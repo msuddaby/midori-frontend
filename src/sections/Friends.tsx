@@ -1,6 +1,5 @@
 import { Avatar } from "@mui/joy";
 
-
 export default function Friends() {
   return (
     <>
@@ -10,83 +9,71 @@ export default function Friends() {
             <h1 className="text-7xl font-bold  mb-6">Friends of Midori</h1>
             <div className="flex flex-col">
               <div className="flex flex-row items-center justify-center w-full gap-2">
-                <Avatar sx={
-                  {
+                <Avatar
+                  sx={{
                     width: "72px",
                     height: "72px",
-                  }
-                } />
-                <Avatar sx={
-                  {
+                  }}
+                />
+                <Avatar
+                  sx={{
                     width: "72px",
                     height: "72px",
-                  }
-                } />
-                <Avatar sx={
-                  {
+                  }}
+                />
+                <Avatar
+                  sx={{
                     width: "72px",
                     height: "72px",
-                  }
-                } />
+                  }}
+                />
               </div>
               <div className="flex flex-row items-center justify-center w-full gap-2">
-                <Avatar sx={
-                  {
+                <Avatar
+                  sx={{
                     width: "72px",
                     height: "72px",
-                  }
-                } />
-                <Avatar sx={
-                  {
+                  }}
+                />
+                <Avatar
+                  sx={{
                     width: "72px",
                     height: "72px",
-                  }
-                } />
-                <Avatar sx={
-                  {
+                  }}
+                />
+                <Avatar
+                  sx={{
                     width: "72px",
                     height: "72px",
-                  }
-                } />
-                <Avatar sx={
-                  {
+                  }}
+                />
+                <Avatar
+                  sx={{
                     width: "72px",
                     height: "72px",
-                  }
-                } />
-                <Avatar sx={
-                  {
-                    width: "72px",
-                    height: "72px",
-                  }
-                } />
-                <Avatar sx={
-                  {
-                    width: "72px",
-                    height: "72px",
-                  }
-                } />
+                  }}
+                />
               </div>
             </div>
             <div className="flex flex-row items-center justify-center w-full gap-2">
-              <Avatar sx={
-                {
+              <Avatar
+                sx={{
                   width: "72px",
                   height: "72px",
-                }
-              } />
-              <Avatar sx={
-                {
+                }}
+              />
+              <Avatar
+                sx={{
                   width: "72px",
                   height: "72px",
-                }
-              } />
-              <Avatar sx={
-                {
+                }}
+              />
+              <Avatar
+                sx={{
                   width: "72px",
                   height: "72px",
-                }
-              } />
+                }}
+              />
             </div>
           </div>
         </div>

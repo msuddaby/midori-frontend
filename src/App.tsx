@@ -6,7 +6,8 @@ import Hero from "./sections/Hero";
 import Offerings from "./sections/Offerings";
 import WhoIs from "./sections/WhoIs";
 import Contact from "./sections/Contact";
-// import gsap from "gsap-trial";
+import { useLayoutEffect } from "react";
+import gsap from "gsap";
 // import { ScrollTrigger } from "gsap-trial/all";
 // import { ScrollSmoother } from "gsap-trial/dist/ScrollSmoother";
 
@@ -22,7 +23,6 @@ import Contact from "./sections/Contact";
 //   }
 // })
 
-
 function App() {
   // useLayoutEffect(() => {
   //   const ctx = gsap.context(() => {
@@ -35,17 +35,30 @@ function App() {
   //   return () => ctx.revert();
   // }, []);
 
+  useLayoutEffect(() => {
+    gsap.to(".big-text.anim", {
+      webkitTextStroke: "8px black",
+      color: "white",
+      delay: 1,
+      duration: 1,
+      ease: "power2.inOut",
+    });
+  }, []);
+
   return (
     <>
       <CssVarsProvider defaultMode="dark">
         <div id="smooth-wrapper">
           <div id="smooth-content">
-            <Hero />
+            <p className="big-text anim">Testing testing</p>
+            <p className="big-text secondary">Testing testing</p>
+
+            {/* <Hero />
             <WhoIs />
             <Offerings />
             <BestOf />
             <Friends />
-            <Contact />
+            <Contact /> */}
           </div>
         </div>
       </CssVarsProvider>

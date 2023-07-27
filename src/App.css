@@ -1,0 +1,19 @@
+.big-text {
+    font-weight: 800;
+    font-size: 16rem;
+}
+
+.big-text-white {
+    color: white;
+}
+
+.big-text-outline {
+    -webkit-text-stroke: 8px black;
+}
+
+.big-text.secondary {
+    position: absolute;
+    top: 0;
+    left: 0;
+    mask: gradient(#000 0%, #000 50%, transparent 50%);
+}

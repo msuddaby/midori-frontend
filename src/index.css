@@ -9,9 +9,6 @@ html {
   overflow-x: hidden;
 }
 
-section {
-  padding: 4rem;
-}
 
 .wave-bg {
   background: url("./waves.svg") repeat-x;
@@ -82,4 +79,14 @@ section {
 
 .custom-shape-divider-bottom-1690146370 .shape-fill {
   fill: #0B1816;
+}
+
+
+.blurBox {
+  opacity: 0;
+  filter: blur(8px);
+}
+
+.burn-in {
+  opacity: 0;
 }
