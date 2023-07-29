@@ -90,3 +90,19 @@ html {
 .burn-in {
   opacity: 0;
 }
+
+.whois-mask-container {
+  position: relative;
+}
+
+.whois-mask {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 115%;
+  transform-origin: 100% 50%;
+  opacity: 0.6;
+  background: #000;
+}

@@ -6,6 +6,8 @@ import Hero from "./sections/Hero";
 import Offerings from "./sections/Offerings";
 import WhoIs from "./sections/WhoIs";
 import Contact from "./sections/Contact";
+import Lenis from "@studio-freight/lenis";
+import { useLayoutEffect } from "react";
 // import { useLayoutEffect } from "react";
 // import gsap from "gsap";
 // import { ScrollTrigger } from "gsap-trial/all";
@@ -44,6 +46,22 @@ function App() {
   //     ease: "power2.inOut",
   //   });
   // }, []);
+
+  useLayoutEffect(() => {
+    const lenis = new Lenis({
+      // infinite: true,
+      lerp: 0.2,
+    });
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => lenis.destroy();
+  });
 
   return (
     <>

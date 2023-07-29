@@ -1,6 +1,7 @@
 import gsap from "gsap";
 import { useLayoutEffect } from "react";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import SplitType from "split-type";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -35,13 +36,50 @@ function burnIn() {
 }
 
 export default function WhoIs() {
+  //   lines.lines!.map((line) => {
+  //     const div = document.createElement("div");
+  //     div.classList.add("relative");
+  //     const sp = document.createElement("span");
+  //     sp.classList.add("whois-mask");
+  //     div.appendChild(sp);
+  //     div.appendChild(line);
+  //     line.parentElement?.replaceWith(div);
+  //   });
+
   useLayoutEffect(() => {
+    const lines = new SplitType(".whois-content");
+
+    lines.lines!.map((line) => {
+      const wrapper = document.createElement("div");
+      const sp = document.createElement("span");
+      sp.classList.add("whois-mask");
+      line.parentElement!.insertBefore(wrapper, line);
+      wrapper.appendChild(line);
+      wrapper.classList.add("relative");
+      wrapper.appendChild(sp);
+    });
+
     ScrollTrigger.create({
       trigger: "#whoIsContainer",
       start: "top 60%",
       end: "bottom 50%",
       markers: true,
       onEnter: () => burnIn(),
+    });
+
+    gsap.to(".whois-mask", {
+      scrollTrigger: {
+        trigger: ".whois-mask-container",
+        start: "top 60%",
+        end: "bottom 50%",
+        markers: true,
+        scrub: true,
+      },
+      //   scrollTrigger: ".whois-mask-container",
+      x: "+100%",
+      stagger: 0.2,
+      duration: 2,
+      ease: "power2.inOut",
     });
   }, []);
 
@@ -57,23 +95,28 @@ export default function WhoIs() {
               Who Is Midori?
             </h1>
 
-            <p className="text-lg text-white" data-speed="auto">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
-              nobis quidem numquam cum aspernatur dolorem rem, molestias id
-              omnis architecto. Nisi doloribus voluptate explicabo maxime,
-              impedit sed eaque? Vel, provident? Repellendus esse voluptatem
-              quae debitis ipsum veniam harum numquam quidem delectus. Aliquam
-              corporis quidem unde. Unde, iure, alias similique dolorum voluptas
-              culpa, eveniet velit harum commodi aliquid quam voluptatem nobis.
-              Voluptates recusandae voluptatum facilis delectus laudantium qui
-              animi exercitationem at ipsum est. Voluptatum sed, rerum hic
-              ducimus, doloremque, eaque inventore illo aliquid aperiam illum
-              blanditiis sequi exercitationem pariatur numquam fugiat.
-              Similique, itaque facere et dolor laborum voluptates eveniet? Id
-              quod saepe cum, rem neque, quam ipsam nihil quidem, nostrum harum
-              accusantium quo nam quasi ex cumque omnis consectetur deserunt
-              laudantium!
-            </p>
+            <span className="whois-mask-container">
+              <span
+                className="text-6xl font-extrabold leading-normal text-white whois-content"
+                data-speed="auto"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+                nobis quidem numquam cum aspernatur dolorem rem, molestias id
+                omnis architecto. Nisi doloribus voluptate explicabo maxime,
+                impedit sed eaque? Vel, provident? Repellendus esse voluptatem
+                quae debitis ipsum veniam harum numquam quidem delectus. Aliquam
+                corporis quidem unde. Unde, iure, alias similique dolorum
+                voluptas culpa, eveniet velit harum commodi aliquid quam
+                voluptatem nobis. Voluptates recusandae voluptatum facilis
+                delectus laudantium qui animi exercitationem at ipsum est.
+                Voluptatum sed, rerum hic ducimus, doloremque, eaque inventore
+                illo aliquid aperiam illum blanditiis sequi exercitationem
+                pariatur numquam fugiat. Similique, itaque facere et dolor
+                laborum voluptates eveniet? Id quod saepe cum, rem neque, quam
+                ipsam nihil quidem, nostrum harum accusantium quo nam quasi ex
+                cumque omnis consectetur deserunt laudantium!
+              </span>
+            </span>
           </div>
         </div>
       </section>

@@ -14,6 +14,7 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@mui/joy": "^5.0.0-alpha.89",
+    "@studio-freight/lenis": "^1.0.19",
     "gsap": "^3.12.2",
     "gsap-trial": "^3.12.2",
     "prop-types": "^15.8.1",
@@ -21,7 +22,8 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.14.2",
     "smooth-scrollbar": "^8.8.4",
-    "smooth-scrollbar-react": "^2.4.1"
+    "smooth-scrollbar-react": "^2.4.1",
+    "split-type": "^0.3.3"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
