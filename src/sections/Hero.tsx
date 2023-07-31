@@ -67,9 +67,9 @@
 //   );
 // }
 
-import { useLayoutEffect } from "react";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+// import { useLayoutEffect } from "react";
+// import gsap from "gsap";
+// import ScrollTrigger from "gsap/ScrollTrigger";
 
 const Hero = () => {
 

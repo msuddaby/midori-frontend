@@ -50,6 +50,8 @@ function App() {
   useLayoutEffect(() => {
     const lenis = new Lenis({
       // infinite: true,
+      lerp: 0.05,
+      smoothWheel: true,
     });
 
     function raf(time: number) {
