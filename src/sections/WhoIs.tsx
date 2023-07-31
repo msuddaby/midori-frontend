@@ -67,18 +67,35 @@ export default function WhoIs() {
       onEnter: () => burnIn(),
     });
 
+    gsap.utils.toArray(".whois-green-highlight").forEach((mask: any) => {
+      gsap.to(mask, {
+        scrollTrigger: {
+          trigger: mask,
+          start: "top 70%",
+          end: "bottom 60%",
+          markers: true,
+          scrub: true,
+          once: false,
+        },
+
+        color: "#00ff00",
+
+      })
+
+    });
+
     gsap.to(".whois-mask", {
       scrollTrigger: {
         trigger: ".whois-mask-container",
-        start: "top 60%",
-        end: "bottom 50%",
+        start: "top 70%",
+        end: "bottom 60%",
         markers: true,
         scrub: true,
       },
       //   scrollTrigger: ".whois-mask-container",
       x: "+100%",
-      stagger: 0.2,
-      duration: 2,
+      stagger: 0.6,
+      duration: 1.5,
       ease: "power2.inOut",
     });
   }, []);
@@ -97,17 +114,17 @@ export default function WhoIs() {
 
             <span className="whois-mask-container">
               <span
-                className="text-6xl font-extrabold leading-normal text-white whois-content"
+                className="text-7xl font-bold leading-normal text-white whois-content"
                 data-speed="auto"
               >
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
                 nobis quidem numquam cum aspernatur dolorem rem, molestias id
-                omnis architecto. Nisi doloribus voluptate explicabo maxime,
+                omnis <span className="whois-green-highlight">architecto.</span> Nisi doloribus voluptate explicabo maxime,
                 impedit sed eaque? Vel, provident? Repellendus esse voluptatem
                 quae debitis ipsum veniam harum numquam quidem delectus. Aliquam
                 corporis quidem unde. Unde, iure, alias similique dolorum
                 voluptas culpa, eveniet velit harum commodi aliquid quam
-                voluptatem nobis. Voluptates recusandae voluptatum facilis
+                voluptatem nobis. Voluptates recusandae <span className="whois-green-highlight">voluptatum</span> facilis
                 delectus laudantium qui animi exercitationem at ipsum est.
                 Voluptatum sed, rerum hic ducimus, doloremque, eaque inventore
                 illo aliquid aperiam illum blanditiis sequi exercitationem

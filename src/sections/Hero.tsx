@@ -58,9 +58,9 @@
 //     <>
 //       <section id="heroSection" className="bg-black text-white min-h-screen min-w-screen p-0 relative m-auto text-center">
 //       <h1 id="companyName"  className="text-6xl font-bold m-auto w-full top-1/2 text-center absolute inline-block text-white">Midori Creative</h1>
-        
+
 //         <div  className="w-full m-auto inline-block origin-top-left">
-          
+
 //         </div>
 //       </section>
 //     </>
@@ -73,60 +73,45 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 const Hero = () => {
 
+  // useLayoutEffect(() => {
 
-  useLayoutEffect(() => {
+  //   gsap.registerPlugin(ScrollTrigger);
 
-    gsap.registerPlugin(ScrollTrigger);
-
-    const h1 = document.querySelector("#mainLogo");
-    
-
-    const h1CurrentPos = h1!.getBoundingClientRect();
-
-    const h1X = h1CurrentPos.x;
-    const h1Y = h1CurrentPos.y * -1;
-
-    const width = document.documentElement.clientWidth;
+  //   const h1 = document.querySelector("#mainLogo");
 
 
-    const toTopCornerx = (width / 2 - h1X);
+  //   const h1CurrentPos = h1!.getBoundingClientRect();
 
-    console.log(h1Y)
+  //   const h1X = h1CurrentPos.x;
+  //   const h1Y = h1CurrentPos.y * -1;
+
+  //   const width = document.documentElement.clientWidth;
 
 
-    gsap.to(h1, {
-      // x: "-40vw",
-      // y: "-40vh",
-      x: toTopCornerx * -1,
-      y: h1Y + 64,
-      scale: 0.25,
-      position: "fixed",
-      // top: "50%",
-      // left: "50%",
-      duration: 1,
-      ease: "power2.inOut",
-      scrollTrigger: {
-        trigger: "#heroSection",
-        start: "top top",
-        end: "bottom top",
+  //   const toTopCornerx = (width / 2 - h1X);
 
-        scrub: true,
-        // onUpdate: (self) => {
-        //   if (self.direction === -1) {
-        //     gsap.to(h1, {
-        //       x: 0,
-        //       y: 0,
-        //       position: "relative",
-        //       top: "auto",
-        //       left: "auto",
-        //       duration: 1,
-        //       ease: "power2.inOut",
-        //     });
-        //   }
-        // },
-      },
-    });
-  }, []);
+  //   console.log(h1Y)
+
+
+  //   gsap.to(h1, {
+
+  //     x: toTopCornerx * -1,
+  //     y: h1Y + 64,
+  //     scale: 0.25,
+  //     position: "fixed",
+
+  //     duration: 1,
+  //     ease: "power2.inOut",
+  //     scrollTrigger: {
+  //       trigger: "#heroSection",
+  //       start: "top top",
+  //       end: "bottom top",
+
+  //       scrub: true,
+
+  //     },
+  //   });
+  // }, []);
 
   return (
     <>
