@@ -84,6 +84,7 @@ export default function WhoIs() {
 
     });
 
+
     gsap.to(".whois-mask", {
       scrollTrigger: {
         trigger: ".whois-mask-container",
@@ -92,10 +93,9 @@ export default function WhoIs() {
         markers: true,
         scrub: true,
       },
-      //   scrollTrigger: ".whois-mask-container",
       x: "+100%",
       stagger: 0.6,
-      duration: 1.5,
+      duration: 4,
       ease: "power2.inOut",
     });
   }, []);
