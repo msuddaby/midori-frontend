@@ -1,0 +1,50 @@
+.offerings-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.offerings-cards {
+    display: flex;
+    padding: 1rem 2rem;
+    gap: 2rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.offerings-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+
+.offerings-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.offerings-controls__button {
+    background-color: gray;
+    border: 1px solid gray;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+
+}
+
+.offerings-controls__button:hover {
+    border: 1px solid greenyellow;
+    color: greenyellow;
+}
+
+@media screen and (min-width: 1200px) {
+    .offerings-controls {
+        display: none;
+    }
+    
+}

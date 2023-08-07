@@ -3,11 +3,11 @@ import "./App.css";
 import BestOf from "./sections/BestOf";
 import Friends from "./sections/Friends";
 import Hero from "./sections/Hero";
-import Offerings from "./sections/Offerings";
 import WhoIs from "./sections/WhoIs";
 import Contact from "./sections/Contact";
 import Lenis from "@studio-freight/lenis";
 import { useLayoutEffect } from "react";
+import NewOfferings from "./sections/NewOfferings";
 // import { useLayoutEffect } from "react";
 // import gsap from "gsap";
 // import { ScrollTrigger } from "gsap-trial/all";
@@ -74,7 +74,7 @@ function App() {
 
             <Hero />
             <WhoIs />
-            <Offerings />
+            <NewOfferings />
             <BestOf />
             <Friends />
             <Contact />
