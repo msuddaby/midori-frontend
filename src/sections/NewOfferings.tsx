@@ -1,6 +1,8 @@
 import { useRef } from "react";
 import WDSDCard from "../components/WDSDCard";
 import "./NewOfferings.css";
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 
 export default function NewOfferings() {
   const cardsRef = useRef<HTMLDivElement>(null);
@@ -41,13 +43,13 @@ export default function NewOfferings() {
               onClick={last}
               className="offerings-controls__button text-white"
             >
-              Previous
+              <NavigateBeforeIcon />
             </button>
             <button
               onClick={next}
               className="offerings-controls__button text-white"
             >
-              Next
+              <NavigateNextIcon />
             </button>
           </div>
         </div>

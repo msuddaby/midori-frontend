@@ -11,6 +11,10 @@
     scrollbar-width: none;
 }
 
+.offerings-cards::-webkit-scrollbar {
+    display: none;
+}
+
 .offerings-header {
     display: flex;
     justify-content: space-between;
@@ -30,10 +34,9 @@
 }
 
 .offerings-controls__button {
-    background-color: gray;
     border: 1px solid gray;
     padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
+    border-radius: 12rem;
 
 }
 
@@ -46,5 +49,5 @@
     .offerings-controls {
         display: none;
     }
-    
+
 }

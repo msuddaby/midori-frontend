@@ -114,7 +114,7 @@ export default function WhoIs() {
 
             <span className="whois-mask-container">
               <span
-                className="text-7xl font-bold leading-normal text-white whois-content"
+                className="text-5xl lg:text-7xl font-bold leading-normal text-white whois-content"
                 data-speed="auto"
               >
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
